@@ -20,7 +20,7 @@ export const PageTransition = (OriginalComponent) => {
             <>
                 <OriginalComponent />
                 <motion.div
-                    className="fixed z-[51] top-0 left-0 min-h-screen w-full bg-berkeley-blue flex justify-center items-center"
+                    className="fixed z-[51] top-0 left-0 min-h-screen w-full bg-black flex justify-center items-center"
                     initial={{ clipPath: "circle(0px at 50% 0%)" }}
                     animate={{ clipPath: "circle(0px at 50% 0%)" }}
                     exit={{ clipPath: "circle(5000px at 50% 0%)" }}
@@ -37,7 +37,7 @@ export const PageTransition = (OriginalComponent) => {
                     </motion.h1>
                 </motion.div>
                 <motion.div
-                    className="fixed z-[51] top-0 left-0 min-h-screen w-full bg-berkeley-blue flex justify-center items-center"
+                    className="fixed z-[51] top-0 left-0 min-h-screen w-full bg-black flex justify-center items-center"
                     initial={{ clipPath: "circle(5000px at 50% 0%)" }}
                     animate={{ clipPath: "circle(0px at 50% 0%)" }}
                     exit={{ clipPath: "circle(0px at 50% 0%)" }}

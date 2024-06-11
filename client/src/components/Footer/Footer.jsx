@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TextAnimation } from "../textAnimation/TextAnimation";
+import { useNavigate } from "react-router-dom";
+
+const emailid = "arjuntandonprofessional@gmail.com";
 
 export const Footer = () => {
+    const navigate = useNavigate();
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
@@ -43,33 +47,25 @@ export const Footer = () => {
                             type: "tween",
                             duration: 2,
                         }}
-                        onClick={() => navigate("/about")}
+                        onClick={() => navigate("/contact")}
                         className="border-2 border-honeydew cursor-pointer absolute left-3/4 -top-20 w-40 h-40 rounded-full bg-red-pantone flex items-center justify-center font-bebas tracking-wider text-xl"
                     >
                         Contact Me
                     </motion.div>
                 </div>
                 <div className="my-20 flex flex-row">
-                    <motion.button
-                        whileHover={{ backgroundColor: "#e63946" }}
-                        transition={{
-                            type: "tween",
-                            duration: 0.5,
-                        }}
-                        className="p-5 tracking-wide mr-10 text-honeydew bg-transparent font-oswald text-2xl rounded-full border-2 border-honeydew"
-                    >
-                        arjuntandonprofessional@gmail.com
-                    </motion.button>
-                    <motion.button
-                        whileHover={{ backgroundColor: "#e63946" }}
-                        transition={{
-                            type: "tween",
-                            duration: 0.5,
-                        }}
-                        className="p-5 tracking-wide mr-10 text-honeydew bg-transparent font-oswald text-2xl rounded-full border-2 border-honeydew"
-                    >
-                        My Number Here
-                    </motion.button>
+                    <a href={`mailto:${emailid}`}>
+                        <motion.button
+                            whileHover={{ backgroundColor: "#e63946" }}
+                            transition={{
+                                type: "tween",
+                                duration: 0.5,
+                            }}
+                            className="p-5 tracking-wide mr-10 text-honeydew bg-transparent font-oswald text-2xl rounded-full border-2 border-honeydew"
+                        >
+                            {emailid}
+                        </motion.button>
+                    </a>
                 </div>
             </div>
             <div className=" h-20 w-full p-5 flex flex-row justify-between items-center absolute bottom-0 left-0">
