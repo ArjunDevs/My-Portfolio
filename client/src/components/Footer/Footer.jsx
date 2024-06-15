@@ -24,8 +24,9 @@ export const Footer = () => {
         <div
             className="h-screen relative"
             style={{
-                backgroundImage: "url('/HomeAssets/BG-7.png')",
+                backgroundImage: "url('/HomeAssets/BG-8.svg')",
                 backgroundSize: "cover",
+                backgroundAttachment: "fixed",
             }}
         >
             <div className="h-full w-full pt-20 px-60">

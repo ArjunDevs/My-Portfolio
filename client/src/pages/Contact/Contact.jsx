@@ -30,11 +30,17 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const myemail = "arjuntandonprofessional@gmail.com";
 
-        console.log(formData);
+    const createMailtoLink = () => {
+        const { name, email, NameOfOrganization, services, message } = formData;
+        const subject = encodeURIComponent("Project Inquiry");
+        const body = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\nOrganization: ${NameOfOrganization}\nServices: ${services}\nMessage: ${message}`
+        );
+        return `mailto:${myemail}?subject=${subject}&body=${body}`;
     };
+
     return (
         <>
             <StickyMorphCursor />
@@ -55,10 +61,7 @@ const Contact = () => {
                         </h1>
                     </TextAnimation>
 
-                    <form
-                        className="flex flex-col pt-16 w-3/4"
-                        onSubmit={handleSubmit}
-                    >
+                    <form className="flex flex-col pt-16 w-3/4">
                         <div className="flex flex-col py-10 border-b-2 border-honeydew">
                             <label
                                 className="font-oswald text-honeydew pb-3 font-bold text-2xl"
@@ -155,9 +158,8 @@ const Contact = () => {
                         </div>
                         <div className=" mt-40 pb-40 relative">
                             <div className="h-[2px] bg-honeydew " />
-                            <motion.button
+                            <motion.a
                                 data-sticky
-                                type="submit"
                                 animate={{
                                     scale: [1, 1.2, 1, 1.1, 1],
                                 }}
@@ -170,9 +172,10 @@ const Contact = () => {
                                     duration: 2,
                                 }}
                                 className="border-2 border-honeydew cursor-pointer absolute left-3/4 -top-20 w-40 h-40 rounded-full bg-blue-600 flex items-center justify-center font-bebas tracking-wider text-xl"
+                                href={createMailtoLink()}
                             >
                                 Submit
-                            </motion.button>
+                            </motion.a>
                         </div>
                     </form>
                 </div>

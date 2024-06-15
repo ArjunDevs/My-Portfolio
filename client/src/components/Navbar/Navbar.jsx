@@ -128,7 +128,7 @@ function Navbar() {
                         exit={{
                             x: "100%",
                             transition: {
-                                duration: 2,
+                                duration: 1,
                                 type: "tween",
                             },
                         }}
@@ -203,12 +203,32 @@ function Navbar() {
                             )}
                         </motion.svg>
                         <div className="w-full">
-                            <ul className="m-20">
+                            <h1 className="mx-10 font-bebas font-bold text-lg">
+                                # NavLinks
+                            </h1>
+                            <ul className="m-10">
+                                <li className="mb-10">
+                                    <Link to={`/`}>
+                                        <motion.h1
+                                            initial={{ scale: 1 }}
+                                            whileHover={{
+                                                scale: 1.1,
+                                                color: "#1d3557",
+                                            }}
+                                            className=" font-bebas text-8xl text-red-pantone w-fit"
+                                        >
+                                            HOME
+                                        </motion.h1>
+                                    </Link>
+                                </li>
                                 <li className="mb-10">
                                     <Link to={`/work`}>
                                         <motion.h1
                                             initial={{ scale: 1 }}
-                                            whileHover={{ scale: 1.1 }}
+                                            whileHover={{
+                                                scale: 1.1,
+                                                color: "#1d3557",
+                                            }}
                                             className=" font-bebas text-8xl text-red-pantone w-fit"
                                         >
                                             WORK
@@ -219,7 +239,10 @@ function Navbar() {
                                     <Link to={`/about`}>
                                         <motion.h1
                                             initial={{ scale: 1 }}
-                                            whileHover={{ scale: 1.1 }}
+                                            whileHover={{
+                                                scale: 1.1,
+                                                color: "#1d3557",
+                                            }}
                                             className=" font-bebas text-8xl text-red-pantone w-fit"
                                         >
                                             ABOUT
@@ -230,7 +253,10 @@ function Navbar() {
                                     <Link to={`/contact`}>
                                         <motion.h1
                                             initial={{ scale: 1 }}
-                                            whileHover={{ scale: 1.1 }}
+                                            whileHover={{
+                                                scale: 1.1,
+                                                color: "#1d3557",
+                                            }}
                                             className=" font-bebas text-8xl text-red-pantone w-fit"
                                         >
                                             CONTACT
@@ -238,6 +264,18 @@ function Navbar() {
                                     </Link>
                                 </li>
                             </ul>
+                        </div>
+                        <div className="absolute bottom-0 left-0 px-5 flex flex-row justify-center items-center">
+                            <span>
+                                <img
+                                    src="/NavbarAssets/copyright.svg"
+                                    alt="copyright"
+                                    className="w-4 h-4"
+                                />
+                            </span>
+                            <h1 className="font-bebas font-bold text-lg">
+                                <span>ARJUN TANDON</span>
+                            </h1>
                         </div>
                     </motion.div>
                 )}

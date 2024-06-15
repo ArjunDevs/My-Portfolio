@@ -27,6 +27,7 @@ const Home = () => {
                     style={{
                         backgroundImage: "url('/HomeAssets/BG-3.png')",
                         backgroundSize: "cover",
+                        backgroundAttachment: "fixed",
                     }}
                 >
                     <Navbar />
@@ -93,6 +94,7 @@ const Home = () => {
                     style={{
                         backgroundImage: "url('/HomeAssets/BG-4.png')",
                         backgroundSize: "cover",
+                        backgroundAttachment: "fixed",
                     }}
                 >
                     <div className="flex flex-row justify-between items-center px-10 pt-40">
